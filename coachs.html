@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coachs et infopreneurs · Agence Poulpe</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 64 64' width='34' height='34' aria-hidden='true'><path d='M14 31a18 18 0 0 1 36 0v3H14z' fill='%232E7D8C'/><circle cx='25' cy='27' r='2.6' fill='%2316324F'/><circle cx='39' cy='27' r='2.6' fill='%2316324F'/><g fill='none' stroke='%232E7D8C' stroke-width='4' stroke-linecap='round'><path d='M17 34c-1 7-4 10-8 11'/><path d='M26 34c0 8-2 13-6 16'/><path d='M38 34c0 8 2 13 6 16'/><path d='M47 34c1 7 4 10 8 11'/></g></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--encre:#16324F;--gris:#66707D;--lagon:#2E7D8C;--lagon-fonce:#246775;--lagon-pale:#DDEFEE;--erreur:#C26A6A;--bleu-ciel:#4FA3A5;--champ:#F2F4F4;--blanc:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;background:var(--blanc);color:var(--encre);font-size:17px;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.fond{position:absolute;inset:0 0 auto 0;height:620px;z-index:-1;pointer-events:none;
+ background:radial-gradient(60% 55% at 50% -8%,rgba(46,125,140,.22) 0%,rgba(46,125,140,0) 70%),radial-gradient(40% 45% at 12% 12%,rgba(79,163,165,.28) 0%,rgba(79,163,165,0) 70%),radial-gradient(38% 40% at 90% 18%,rgba(46,125,140,.20) 0%,rgba(46,125,140,0) 70%)}
+.fond::after{content:"";position:absolute;inset:auto 0 0 0;height:240px;background:linear-gradient(rgba(255,255,255,0),#fff)}
+main{padding:32px 40px 120px}
+.logo{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:20px;letter-spacing:-.03em;text-decoration:none;margin-bottom:28px}
+.colonne{max-width:560px;margin:0 auto}
+.etiquette{display:table;margin:0 auto 14px;background:var(--lagon-pale);color:var(--lagon-fonce);font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px}
+h1{font-size:34px;line-height:1.06;font-weight:600;letter-spacing:-.035em;text-align:center;margin-bottom:14px}
+h1 em{font-style:normal;background:linear-gradient(90deg,#16324F 0%,#246775 38%,#2E7D8C 72%,#4FA3A5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sous-titre{color:var(--gris);margin-bottom:28px}
+.benefices{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+.benefices li{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600}
+.benefices .coche{flex:none;width:26px;height:26px;border-radius:999px;background:var(--lagon-pale);color:var(--lagon);display:flex;align-items:center;justify-content:center}
+.ligne{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.champ{margin-bottom:18px}
+label.titre{display:block;font-size:13px;font-weight:500;color:var(--gris);margin-bottom:8px}
+input[type=text],input[type=email],input[type=tel],select{width:100%;font:inherit;font-size:16px;color:var(--encre);background:var(--champ);border:1.5px solid transparent;border-radius:12px;padding:14px 16px;appearance:none;-webkit-appearance:none;transition:border-color .15s,background .15s}
+input::placeholder{color:#9AA3AD}
+input:focus,select:focus{outline:none;border-color:var(--lagon);background:#fff}
+.erreur{border-color:var(--erreur)!important}
+.telephone{display:grid;grid-template-columns:auto 1fr;gap:10px}
+.indicatif{position:relative;display:flex;align-items:center;gap:8px;background:var(--champ);border:1.5px solid transparent;border-radius:12px;padding:0 36px 0 14px;font-size:16px;white-space:nowrap;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2366707D' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}.indicatif:focus-within{border-color:var(--lagon);background-color:#fff}.indicatif select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+.note{font-size:12px;color:var(--gris);margin-top:10px}
+.note a{color:var(--encre)}
+.question{font-size:15px;font-weight:600;margin:6px 0 12px}
+.choix{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:28px}
+.option{display:flex;align-items:center;gap:12px;background:var(--champ);border-radius:12px;padding:10px 14px;min-height:48px;cursor:pointer;font-size:15px;border:1.5px solid transparent;transition:border-color .15s,background .15s}
+.option input{position:absolute;opacity:0;pointer-events:none}
+.puce{flex:none;width:20px;height:20px;border-radius:999px;border:1.5px solid #B9C2C9;background:#fff;transition:all .15s}
+.option:has(input:checked){border-color:var(--lagon);background:#fff}
+.option:has(input:checked) .puce{border:6px solid var(--lagon)}
+.option.erreur{border-color:var(--erreur)}
+.bouton{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font:inherit;font-size:16px;font-weight:600;color:#fff;background:var(--lagon);border:none;border-radius:12px;padding:16px 24px;cursor:pointer;box-shadow:0 1px 2px rgba(22,50,79,.12),inset 0 1px 0 rgba(255,255,255,.12);transition:background .2s,opacity .2s,transform .15s}
+.bouton:hover{background:var(--lagon-fonce)}
+.bouton:active{transform:translateY(1px)}
+.bouton:focus-visible{outline:3px solid var(--lagon-pale);outline-offset:2px}
+.bouton svg{transition:transform .2s}.bouton:hover svg{transform:translateX(3px)}
+.bouton.inactif{opacity:.55}
+.etape-2{display:none}
+.etape-2 h2{font-size:22px;letter-spacing:-.03em;margin-bottom:4px}
+.etape-2 p{color:var(--gris);font-size:15px;margin-bottom:14px}
+.etape-2 iframe{width:100%;height:640px;border:0;border-radius:14px;background:var(--champ)}
+.preuve{margin-top:56px;text-align:center}
+.preuve p{font-size:13px;color:var(--gris);margin-bottom:16px}
+.preuve .logos{display:flex;justify-content:center;flex-wrap:wrap;gap:16px 40px;color:var(--gris);font-weight:600}
+footer{display:flex;justify-content:center;gap:20px;margin-top:40px;font-size:12px;color:var(--gris)}
+footer a{text-decoration:none}
+@media (max-width:900px){
+ main{padding:24px 20px 140px}
+ .logo{justify-content:flex-start}
+ h1{text-align:left;font-size:32px}
+ }
+@media (max-width:420px){.choix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="fond" aria-hidden="true"></div>
+<main>
+  <a class="logo" href="#"><svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true"><path d="M14 31a18 18 0 0 1 36 0v3H14z" fill="#2E7D8C"/><circle cx="25" cy="27" r="2.6" fill="#16324F"/><circle cx="39" cy="27" r="2.6" fill="#16324F"/><g fill="none" stroke="#2E7D8C" stroke-width="4" stroke-linecap="round"><path d="M17 34c-1 7-4 10-8 11"/><path d="M26 34c0 8-2 13-6 16"/><path d="M38 34c0 8 2 13 6 16"/><path d="M47 34c1 7 4 10 8 11"/></g></svg>Agence Poulpe</a>
+  <div class="colonne">
+    <p class="etiquette">Coachs &amp; infopreneurs</p>
+    <h1>Ton business de coaching,<br><em>avec huit bras de plus</em>.</h1>
+    <p class="sous-titre">Un appel de 30 minutes pour repérer ce qu'on peut automatiser dans ton business. Sans discours commercial.</p>
+
+    <form id="formulaire" novalidate>
+      <div id="etape-1">
+        <div class="ligne">
+          <div class="champ"><label class="titre" for="prenom">Prénom</label><input id="prenom" name="prenom" type="text" placeholder="Camille" autocomplete="given-name" required></div>
+          <div class="champ"><label class="titre" for="nom">Nom</label><input id="nom" name="nom" type="text" placeholder="Martin" autocomplete="family-name" required></div>
+        </div>
+        <div class="champ"><label class="titre" for="email">E-mail</label><input id="email" name="email" type="email" placeholder="prenom@moncoaching.fr" autocomplete="email" required></div>
+        
+        <div class="champ">
+          <label class="titre" for="numero">WhatsApp</label>
+          <div class="telephone">
+            <div class="indicatif"><span class="affiche">🇫🇷 +33</span><select name="indicatif" aria-label="Indicatif du pays"><option value="+33" data-pays="FR" selected>🇫🇷 +33 · France</option><option value="+32" data-pays="BE">🇧🇪 +32 · Belgique</option><option value="+41" data-pays="CH">🇨🇭 +41 · Suisse</option><option value="+352" data-pays="LU">🇱🇺 +352 · Luxembourg</option><option value="+1" data-pays="CA">🇨🇦 +1 · Canada</option><option value="+212" data-pays="MA">🇲🇦 +212 · Maroc</option><option value="+213" data-pays="DZ">🇩🇿 +213 · Algérie</option><option value="+216" data-pays="TN">🇹🇳 +216 · Tunisie</option><option disabled>──────────</option><option value="+93" data-pays="AF">🇦🇫 +93 · Afghanistan</option><option value="+27" data-pays="ZA">🇿🇦 +27 · Afrique du Sud</option><option value="+355" data-pays="AL">🇦🇱 +355 · Albanie</option><option value="+49" data-pays="DE">🇩🇪 +49 · Allemagne</option><option value="+376" data-pays="AD">🇦🇩 +376 · Andorre</option><option value="+244" data-pays="AO">🇦🇴 +244 · Angola</option><option value="+1" data-pays="AG">🇦🇬 +1 · Antigua-et-Barbuda</option><option value="+966" data-pays="SA">🇸🇦 +966 · Arabie saoudite</option><option value="+54" data-pays="AR">🇦🇷 +54 · Argentine</option><option value="+374" data-pays="AM">🇦🇲 +374 · Arménie</option><option value="+61" data-pays="AU">🇦🇺 +61 · Australie</option><option value="+43" data-pays="AT">🇦🇹 +43 · Autriche</option><option value="+994" data-pays="AZ">🇦🇿 +994 · Azerbaïdjan</option><option value="+1" data-pays="BS">🇧🇸 +1 · Bahamas</option><option value="+973" data-pays="BH">🇧🇭 +973 · Bahreïn</option><option value="+880" data-pays="BD">🇧🇩 +880 · Bangladesh</option><option value="+1" data-pays="BB">🇧🇧 +1 · Barbade</option><option value="+501" data-pays="BZ">🇧🇿 +501 · Belize</option><option value="+229" data-pays="BJ">🇧🇯 +229 · Bénin</option><option value="+975" data-pays="BT">🇧🇹 +975 · Bhoutan</option><option value="+375" data-pays="BY">🇧🇾 +375 · Biélorussie</option><option value="+591" data-pays="BO">🇧🇴 +591 · Bolivie</option><option value="+387" data-pays="BA">🇧🇦 +387 · Bosnie-Herzégovine</option><option value="+267" data-pays="BW">🇧🇼 +267 · Botswana</option><option value="+55" data-pays="BR">🇧🇷 +55 · Brésil</option><option value="+673" data-pays="BN">🇧🇳 +673 · Brunei</option><option value="+359" data-pays="BG">🇧🇬 +359 · Bulgarie</option><option value="+226" data-pays="BF">🇧🇫 +226 · Burkina Faso</option><option value="+257" data-pays="BI">🇧🇮 +257 · Burundi</option><option value="+855" data-pays="KH">🇰🇭 +855 · Cambodge</option><option value="+237" data-pays="CM">🇨🇲 +237 · Cameroun</option><option value="+238" data-pays="CV">🇨🇻 +238 · Cap-Vert</option><option value="+236" data-pays="CF">🇨🇫 +236 · Centrafrique</option><option value="+56" data-pays="CL">🇨🇱 +56 · Chili</option><option value="+86" data-pays="CN">🇨🇳 +86 · Chine</option><option value="+357" data-pays="CY">🇨🇾 +357 · Chypre</option><option value="+57" data-pays="CO">🇨🇴 +57 · Colombie</option><option value="+269" data-pays="KM">🇰🇲 +269 · Comores</option><option value="+242" data-pays="CG">🇨🇬 +242 · Congo</option><option value="+243" data-pays="CD">🇨🇩 +243 · Congo (RDC)</option><option value="+82" data-pays="KR">🇰🇷 +82 · Corée du Sud</option><option value="+506" data-pays="CR">🇨🇷 +506 · Costa Rica</option><option value="+225" data-pays="CI">🇨🇮 +225 · Côte d'Ivoire</option><option value="+385" data-pays="HR">🇭🇷 +385 · Croatie</option><option value="+53" data-pays="CU">🇨🇺 +53 · Cuba</option><option value="+45" data-pays="DK">🇩🇰 +45 · Danemark</option><option value="+253" data-pays="DJ">🇩🇯 +253 · Djibouti</option><option value="+1" data-pays="DM">🇩🇲 +1 · Dominique</option><option value="+20" data-pays="EG">🇪🇬 +20 · Égypte</option><option value="+971" data-pays="AE">🇦🇪 +971 · Émirats arabes unis</option><option value="+593" data-pays="EC">🇪🇨 +593 · Équateur</option><option value="+291" data-pays="ER">🇪🇷 +291 · Érythrée</option><option value="+34" data-pays="ES">🇪🇸 +34 · Espagne</option><option value="+372" data-pays="EE">🇪🇪 +372 · Estonie</option><option value="+268" data-pays="SZ">🇸🇿 +268 · Eswatini</option><option value="+1" data-pays="US">🇺🇸 +1 · États-Unis</option><option value="+251" data-pays="ET">🇪🇹 +251 · Éthiopie</option><option value="+679" data-pays="FJ">🇫🇯 +679 · Fidji</option><option value="+358" data-pays="FI">🇫🇮 +358 · Finlande</option><option value="+241" data-pays="GA">🇬🇦 +241 · Gabon</option><option value="+220" data-pays="GM">🇬🇲 +220 · Gambie</option><option value="+995" data-pays="GE">🇬🇪 +995 · Géorgie</option><option value="+233" data-pays="GH">🇬🇭 +233 · Ghana</option><option value="+30" data-pays="GR">🇬🇷 +30 · Grèce</option><option value="+1" data-pays="GD">🇬🇩 +1 · Grenade</option><option value="+590" data-pays="GP">🇬🇵 +590 · Guadeloupe</option><option value="+502" data-pays="GT">🇬🇹 +502 · Guatemala</option><option value="+224" data-pays="GN">🇬🇳 +224 · Guinée</option><option value="+240" data-pays="GQ">🇬🇶 +240 · Guinée équatoriale</option><option value="+245" data-pays="GW">🇬🇼 +245 · Guinée-Bissau</option><option value="+592" data-pays="GY">🇬🇾 +592 · Guyana</option><option value="+594" data-pays="GF">🇬🇫 +594 · Guyane</option><option value="+509" data-pays="HT">🇭🇹 +509 · Haïti</option><option value="+504" data-pays="HN">🇭🇳 +504 · Honduras</option><option value="+852" data-pays="HK">🇭🇰 +852 · Hong Kong</option><option value="+36" data-pays="HU">🇭🇺 +36 · Hongrie</option><option value="+91" data-pays="IN">🇮🇳 +91 · Inde</option><option value="+62" data-pays="ID">🇮🇩 +62 · Indonésie</option><option value="+964" data-pays="IQ">🇮🇶 +964 · Irak</option><option value="+98" data-pays="IR">🇮🇷 +98 · Iran</option><option value="+353" data-pays="IE">🇮🇪 +353 · Irlande</option><option value="+354" data-pays="IS">🇮🇸 +354 · Islande</option><option value="+972" data-pays="IL">🇮🇱 +972 · Israël</option><option value="+39" data-pays="IT">🇮🇹 +39 · Italie</option><option value="+1" data-pays="JM">🇯🇲 +1 · Jamaïque</option><option value="+81" data-pays="JP">🇯🇵 +81 · Japon</option><option value="+962" data-pays="JO">🇯🇴 +962 · Jordanie</option><option value="+7" data-pays="KZ">🇰🇿 +7 · Kazakhstan</option><option value="+254" data-pays="KE">🇰🇪 +254 · Kenya</option><option value="+996" data-pays="KG">🇰🇬 +996 · Kirghizistan</option><option value="+965" data-pays="KW">🇰🇼 +965 · Koweït</option><option value="+262" data-pays="RE">🇷🇪 +262 · La Réunion</option><option value="+856" data-pays="LA">🇱🇦 +856 · Laos</option><option value="+266" data-pays="LS">🇱🇸 +266 · Lesotho</option><option value="+371" data-pays="LV">🇱🇻 +371 · Lettonie</option><option value="+961" data-pays="LB">🇱🇧 +961 · Liban</option><option value="+231" data-pays="LR">🇱🇷 +231 · Liberia</option><option value="+218" data-pays="LY">🇱🇾 +218 · Libye</option><option value="+423" data-pays="LI">🇱🇮 +423 · Liechtenstein</option><option value="+370" data-pays="LT">🇱🇹 +370 · Lituanie</option><option value="+853" data-pays="MO">🇲🇴 +853 · Macao</option><option value="+389" data-pays="MK">🇲🇰 +389 · Macédoine du Nord</option><option value="+261" data-pays="MG">🇲🇬 +261 · Madagascar</option><option value="+60" data-pays="MY">🇲🇾 +60 · Malaisie</option><option value="+265" data-pays="MW">🇲🇼 +265 · Malawi</option><option value="+960" data-pays="MV">🇲🇻 +960 · Maldives</option><option value="+223" data-pays="ML">🇲🇱 +223 · Mali</option><option value="+356" data-pays="MT">🇲🇹 +356 · Malte</option><option value="+596" data-pays="MQ">🇲🇶 +596 · Martinique</option><option value="+230" data-pays="MU">🇲🇺 +230 · Maurice</option><option value="+222" data-pays="MR">🇲🇷 +222 · Mauritanie</option><option value="+262" data-pays="YT">🇾🇹 +262 · Mayotte</option><option value="+52" data-pays="MX">🇲🇽 +52 · Mexique</option><option value="+373" data-pays="MD">🇲🇩 +373 · Moldavie</option><option value="+377" data-pays="MC">🇲🇨 +377 · Monaco</option><option value="+976" data-pays="MN">🇲🇳 +976 · Mongolie</option><option value="+382" data-pays="ME">🇲🇪 +382 · Monténégro</option><option value="+258" data-pays="MZ">🇲🇿 +258 · Mozambique</option><option value="+95" data-pays="MM">🇲🇲 +95 · Myanmar</option><option value="+264" data-pays="NA">🇳🇦 +264 · Namibie</option><option value="+977" data-pays="NP">🇳🇵 +977 · Népal</option><option value="+505" data-pays="NI">🇳🇮 +505 · Nicaragua</option><option value="+227" data-pays="NE">🇳🇪 +227 · Niger</option><option value="+234" data-pays="NG">🇳🇬 +234 · Nigeria</option><option value="+47" data-pays="NO">🇳🇴 +47 · Norvège</option><option value="+687" data-pays="NC">🇳🇨 +687 · Nouvelle-Calédonie</option><option value="+64" data-pays="NZ">🇳🇿 +64 · Nouvelle-Zélande</option><option value="+968" data-pays="OM">🇴🇲 +968 · Oman</option><option value="+256" data-pays="UG">🇺🇬 +256 · Ouganda</option><option value="+998" data-pays="UZ">🇺🇿 +998 · Ouzbékistan</option><option value="+92" data-pays="PK">🇵🇰 +92 · Pakistan</option><option value="+970" data-pays="PS">🇵🇸 +970 · Palestine</option><option value="+507" data-pays="PA">🇵🇦 +507 · Panama</option><option value="+675" data-pays="PG">🇵🇬 +675 · Papouasie-Nouvelle-Guinée</option><option value="+595" data-pays="PY">🇵🇾 +595 · Paraguay</option><option value="+31" data-pays="NL">🇳🇱 +31 · Pays-Bas</option><option value="+51" data-pays="PE">🇵🇪 +51 · Pérou</option><option value="+63" data-pays="PH">🇵🇭 +63 · Philippines</option><option value="+48" data-pays="PL">🇵🇱 +48 · Pologne</option><option value="+689" data-pays="PF">🇵🇫 +689 · Polynésie française</option><option value="+1" data-pays="PR">🇵🇷 +1 · Porto Rico</option><option value="+351" data-pays="PT">🇵🇹 +351 · Portugal</option><option value="+974" data-pays="QA">🇶🇦 +974 · Qatar</option><option value="+1" data-pays="DO">🇩🇴 +1 · République dominicaine</option><option value="+420" data-pays="CZ">🇨🇿 +420 · République tchèque</option><option value="+40" data-pays="RO">🇷🇴 +40 · Roumanie</option><option value="+44" data-pays="GB">🇬🇧 +44 · Royaume-Uni</option><option value="+7" data-pays="RU">🇷🇺 +7 · Russie</option><option value="+250" data-pays="RW">🇷🇼 +250 · Rwanda</option><option value="+1" data-pays="LC">🇱🇨 +1 · Sainte-Lucie</option><option value="+508" data-pays="PM">🇵🇲 +508 · Saint-Pierre-et-Miquelon</option><option value="+503" data-pays="SV">🇸🇻 +503 · Salvador</option><option value="+221" data-pays="SN">🇸🇳 +221 · Sénégal</option><option value="+381" data-pays="RS">🇷🇸 +381 · Serbie</option><option value="+248" data-pays="SC">🇸🇨 +248 · Seychelles</option><option value="+232" data-pays="SL">🇸🇱 +232 · Sierra Leone</option><option value="+65" data-pays="SG">🇸🇬 +65 · Singapour</option><option value="+421" data-pays="SK">🇸🇰 +421 · Slovaquie</option><option value="+386" data-pays="SI">🇸🇮 +386 · Slovénie</option><option value="+252" data-pays="SO">🇸🇴 +252 · Somalie</option><option value="+249" data-pays="SD">🇸🇩 +249 · Soudan</option><option value="+94" data-pays="LK">🇱🇰 +94 · Sri Lanka</option><option value="+46" data-pays="SE">🇸🇪 +46 · Suède</option><option value="+597" data-pays="SR">🇸🇷 +597 · Suriname</option><option value="+963" data-pays="SY">🇸🇾 +963 · Syrie</option><option value="+992" data-pays="TJ">🇹🇯 +992 · Tadjikistan</option><option value="+886" data-pays="TW">🇹🇼 +886 · Taïwan</option><option value="+255" data-pays="TZ">🇹🇿 +255 · Tanzanie</option><option value="+235" data-pays="TD">🇹🇩 +235 · Tchad</option><option value="+66" data-pays="TH">🇹🇭 +66 · Thaïlande</option><option value="+228" data-pays="TG">🇹🇬 +228 · Togo</option><option value="+1" data-pays="TT">🇹🇹 +1 · Trinité-et-Tobago</option><option value="+993" data-pays="TM">🇹🇲 +993 · Turkménistan</option><option value="+90" data-pays="TR">🇹🇷 +90 · Turquie</option><option value="+380" data-pays="UA">🇺🇦 +380 · Ukraine</option><option value="+598" data-pays="UY">🇺🇾 +598 · Uruguay</option><option value="+58" data-pays="VE">🇻🇪 +58 · Venezuela</option><option value="+84" data-pays="VN">🇻🇳 +84 · Viêt Nam</option><option value="+681" data-pays="WF">🇼🇫 +681 · Wallis-et-Futuna</option><option value="+967" data-pays="YE">🇾🇪 +967 · Yémen</option><option value="+260" data-pays="ZM">🇿🇲 +260 · Zambie</option><option value="+263" data-pays="ZW">🇿🇼 +263 · Zimbabwe</option></select></div>
+            <input id="numero" name="numero" type="tel" placeholder="06 12 34 56 78" autocomplete="tel-national" required>
+          </div>
+          <p class="note">Utilisé uniquement pour préparer l'échange. <a href="confidentialite.html">Confidentialité</a>.</p>
+        </div>
+        <p class="question">Ton CA mensuel</p>
+        <div class="choix"><label class="option"><input type="radio" name="qualification" value="Moins de 5 k€" required><span class="puce" aria-hidden="true"></span><span>Moins de 5 k€</span></label><label class="option"><input type="radio" name="qualification" value="5 à 20 k€" required><span class="puce" aria-hidden="true"></span><span>5 à 20 k€</span></label><label class="option"><input type="radio" name="qualification" value="20 à 50 k€" required><span class="puce" aria-hidden="true"></span><span>20 à 50 k€</span></label><label class="option"><input type="radio" name="qualification" value="Plus de 50 k€" required><span class="puce" aria-hidden="true"></span><span>Plus de 50 k€</span></label></div>
+        <button class="bouton inactif" type="submit">Voir les créneaux disponibles<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="etape-2" id="etape-2">
+        <h2>Choisis ton créneau</h2>
+        <p>Tes infos sont déjà remplies. <a href="#" target="_blank" rel="noopener">Ouvrir l'agenda</a></p>
+        <iframe title="Agenda de réservation"></iframe>
+      </div>
+    </form>
+  </div>
+
+  <!-- Preuve sociale : à activer dès que tu as des clients qui acceptent d'être cités (logos réels uniquement).
+  <div class="preuve">
+    <p>Ils nous font confiance</p>
+    <div class="logos"><span>Client 1</span><span>Client 2</span><span>Client 3</span></div>
+  </div>
+  -->
+
+  <footer><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Politique de confidentialité</a></footer>
+</main>
+
+
+<script>
+const REGLAGES = {"WEBHOOK_URL": "", "PIXEL_ID": ""};
+const SEGMENT = "coachs", AGENDA = "https://calendly.com/cedric11013/30min";
+
+function chargerPixel(){
+  if(!REGLAGES.PIXEL_ID||window.fbq)return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq("init",REGLAGES.PIXEL_ID);fbq("track","PageView");
+}
+chargerPixel();
+
+const form=document.getElementById("formulaire"), bouton=form.querySelector(".bouton");
+function valide(marquer){
+  let ok=true;
+  form.querySelectorAll("input[required]:not([type=radio])").forEach(c=>{
+    const v=c.value.trim(), bad=!v||(c.type==="email"&&!/^\S+@\S+\.\S+$/.test(v));
+    if(marquer)c.classList.toggle("erreur",bad); if(bad)ok=false;
+  });
+  const coche=form.querySelector("input[type=radio]:checked");
+  if(!coche){ok=false; if(marquer)form.querySelectorAll(".option").forEach(o=>o.classList.add("erreur"));}
+  else form.querySelectorAll(".option").forEach(o=>o.classList.remove("erreur"));
+  return ok;
+}
+const selInd=form.querySelector(".indicatif select"), affInd=form.querySelector(".indicatif .affiche");
+selInd.addEventListener("change",()=>{const o=selInd.selectedOptions[0];affInd.textContent=o.textContent.split(" · ")[0];});
+form.addEventListener("input",()=>bouton.classList.toggle("inactif",!valide(false)));
+form.addEventListener("submit",async e=>{
+  e.preventDefault(); if(!valide(true))return;
+  const d=Object.fromEntries(new FormData(form)), q=new URLSearchParams(location.search);
+  Object.assign(d,{whatsapp:(d.indicatif||"")+" "+(d.numero||""),segment:SEGMENT,utm_source:q.get("utm_source")||"",utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",date:new Date().toISOString()});
+  if(REGLAGES.WEBHOOK_URL){try{await fetch(REGLAGES.WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})}catch(err){}}
+  if(typeof fbq==="function")fbq("track","Lead",{content_category:SEGMENT});
+  // Calendly : nom et e-mail préremplis, a2 = site, a3 = WhatsApp, segment dans utm_campaign
+  const a=new URL(AGENDA); a.searchParams.set("name",(d.prenom+" "+d.nom).trim()); a.searchParams.set("email",d.email);
+  if(d.site)a.searchParams.set("a2",d.site); a.searchParams.set("a3",d.whatsapp);
+  a.searchParams.set("utm_source",d.utm_source||"landing"); a.searchParams.set("utm_campaign",SEGMENT); if(d.utm_content)a.searchParams.set("utm_content",d.utm_content);
+  a.searchParams.set("hide_gdpr_banner","1");
+  const lien=a.toString(); a.searchParams.set("embed_domain",location.hostname||"localhost"); a.searchParams.set("embed_type","Inline");
+  document.getElementById("etape-1").style.display="none";
+  const e2=document.getElementById("etape-2"); e2.querySelector("iframe").src=a.toString(); e2.querySelector("a").href=lien;
+  e2.style.display="block"; e2.scrollIntoView({behavior:"smooth",block:"start"});
+});
+</script>
+</body>
+</html>
