@@ -145,7 +145,7 @@ form.addEventListener("input",()=>bouton.classList.toggle("inactif",!valide(fals
 form.addEventListener("submit",async e=>{
   e.preventDefault(); if(!valide(true))return;
   const d=Object.fromEntries(new FormData(form)), q=new URLSearchParams(location.search);
-  Object.assign(d,{whatsapp:(d.indicatif||"")+" "+(d.numero||""),segment:SEGMENT,utm_source:q.get("utm_source")||"",utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",date:new Date().toISOString()});
+  Object.assign(d,{whatsapp:(d.indicatif||"")+" "+(d.numero||"").replace(/\D/g,"").replace(/^0/,""),segment:SEGMENT,utm_source:q.get("utm_source")||"",utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",date:new Date().toISOString()});
   if(REGLAGES.WEBHOOK_URL){try{await fetch(REGLAGES.WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})}catch(err){}}
   if(typeof fbq==="function")fbq("track","Lead",{content_category:SEGMENT});
   // Calendly : nom et e-mail préremplis, a2 = site, a3 = WhatsApp, segment dans utm_campaign
