@@ -120,7 +120,7 @@ footer a{text-decoration:none}
 
 
 <script>
-const REGLAGES = {"WEBHOOK_URL": "https://script.google.com/macros/s/AKfycbxSuDuXZ3iUFQ7aqaho8kvW_6chkQBCB53bKo_-I1_gUTCvz83QzK-EylVBHVSoeC1DBw/exec", "PIXEL_ID": ""};
+const REGLAGES = {"WEBHOOK_URL": "https://script.google.com/macros/s/AKfycbxSuDuXZ3iUFQ7aqaho8kvW_6chkQBCB53bKo_-I1_gUTCvz83QzK-EylVBHVSoeC1DBw/exec", "PIXEL_ID": "4563834643762744"};
 const SEGMENT = "ecommerce", AGENDA = "https://calendly.com/cedric11013/30min";
 
 function chargerPixel(){
@@ -148,9 +148,12 @@ form.addEventListener("input",()=>bouton.classList.toggle("inactif",!valide(fals
 form.addEventListener("submit",async e=>{
   e.preventDefault(); if(!valide(true))return;
   const d=Object.fromEntries(new FormData(form)), q=new URLSearchParams(location.search);
+  const cookie=n=>(document.cookie.match("(^|; )"+n+"=([^;]*)")||[])[2]||"";
+  const fbclid=q.get("fbclid"); const eventId=(crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random());
+  Object.assign(d,{event_id:eventId,fbp:cookie("_fbp"),fbc:cookie("_fbc")||(fbclid?"fb.1."+Date.now()+"."+fbclid:""),user_agent:navigator.userAgent,page_url:location.href});
   Object.assign(d,{whatsapp:(d.indicatif||"")+" "+(d.numero||"").replace(/\D/g,"").replace(/^0/,""),segment:SEGMENT,utm_source:q.get("utm_source")||"",utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",date:new Date().toISOString()});
   if(REGLAGES.WEBHOOK_URL){try{await fetch(REGLAGES.WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})}catch(err){}}
-  if(typeof fbq==="function")fbq("track","Lead",{content_category:SEGMENT});
+  if(typeof fbq==="function")fbq("track","Lead",{content_category:SEGMENT},{eventID:d.event_id});
   // Calendly : nom et e-mail préremplis, a2 = site, a3 = WhatsApp, segment dans utm_campaign
   const a=new URL(AGENDA); a.searchParams.set("name",(d.prenom+" "+d.nom).trim()); a.searchParams.set("email",d.email);
   if(d.site)a.searchParams.set("a2",d.site); a.searchParams.set("a3",d.whatsapp);
