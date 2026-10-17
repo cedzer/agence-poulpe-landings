@@ -22,7 +22,9 @@ main{padding:32px 40px 120px}
 .etiquette{display:table;margin:0 auto 14px;background:var(--lagon-pale);color:var(--lagon-fonce);font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px}
 h1{font-size:34px;line-height:1.06;font-weight:600;letter-spacing:-.035em;text-align:center;margin-bottom:14px}
 h1 em{font-style:normal;background:linear-gradient(90deg,#16324F 0%,#246775 38%,#2E7D8C 72%,#4FA3A5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sous-titre{color:var(--gris);margin-bottom:28px}
+.sous-titre{color:var(--gris);margin-bottom:14px}
+.plan{font-size:15px;color:var(--gris);background:var(--lagon-pale);border-radius:12px;padding:14px 16px;margin-bottom:28px}
+.plan strong{color:var(--encre)}
 .benefices{list-style:none;display:grid;gap:10px;margin-bottom:28px}
 .benefices li{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600}
 .benefices .coche{flex:none;width:26px;height:26px;border-radius:999px;background:var(--lagon-pale);color:var(--lagon);display:flex;align-items:center;justify-content:center}
@@ -73,9 +75,10 @@ footer a{text-decoration:none}
 <main>
   <a class="logo" href="#"><svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true"><path d="M14 31a18 18 0 0 1 36 0v3H14z" fill="#2E7D8C"/><circle cx="25" cy="27" r="2.6" fill="#16324F"/><circle cx="39" cy="27" r="2.6" fill="#16324F"/><g fill="none" stroke="#2E7D8C" stroke-width="4" stroke-linecap="round"><path d="M17 34c-1 7-4 10-8 11"/><path d="M26 34c0 8-2 13-6 16"/><path d="M38 34c0 8 2 13 6 16"/><path d="M47 34c1 7 4 10 8 11"/></g></svg>Agence Poulpe</a>
   <div class="colonne">
-    <p class="etiquette">Agences marketing &amp; pub</p>
-    <h1>Ton agence,<br><em>avec huit bras de plus</em>.</h1>
-    <p class="sous-titre">Un appel de 30 minutes pour repérer ce qu'on peut automatiser dans ton agence. Sans discours commercial.</p>
+    <p class="etiquette">Plan offert · Agences marketing &amp; pub</p>
+    <h1>Ton plan pour rendre <em>des heures à ton agence</em>.</h1>
+    <p class="sous-titre">30 minutes ensemble, et tu reçois sous 48 h ton plan d'automatisation personnalisé : rapports clients, relance des leads, onboarding, prospection.</p>
+    <p class="plan"><strong>Dans ton plan :</strong> les tâches à automatiser en premier, les outils à connecter et leur coût, le pas-à-pas, les erreurs à éviter et ton premier gain rapide. Tu le mets en place seul, ou avec nous.</p>
 
     <form id="formulaire" novalidate>
       <div id="etape-1">
@@ -95,7 +98,7 @@ footer a{text-decoration:none}
         </div>
         <p class="question">Taille de ton agence</p>
         <div class="choix"><label class="option"><input type="radio" name="qualification" value="1 à 3 personnes" required><span class="puce" aria-hidden="true"></span><span>1 à 3 personnes</span></label><label class="option"><input type="radio" name="qualification" value="4 à 10 personnes" required><span class="puce" aria-hidden="true"></span><span>4 à 10 personnes</span></label><label class="option"><input type="radio" name="qualification" value="11 à 25 personnes" required><span class="puce" aria-hidden="true"></span><span>11 à 25 personnes</span></label><label class="option"><input type="radio" name="qualification" value="Plus de 25" required><span class="puce" aria-hidden="true"></span><span>Plus de 25</span></label></div>
-        <button class="bouton inactif" type="submit">Voir les créneaux disponibles<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="bouton inactif" type="submit">Réserver mon appel et recevoir mon plan<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </div>
       <div class="etape-2" id="etape-2">
         <h2>Choisis ton créneau</h2>
