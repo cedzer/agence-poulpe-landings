@@ -158,6 +158,9 @@ form.addEventListener("submit",async e=>{
   const fbclid=q.get("fbclid"); const eventId=(crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random());
   Object.assign(d,{event_id:eventId,fbp:cookie("_fbp"),fbc:cookie("_fbc")||(fbclid?"fb.1."+Date.now()+"."+fbclid:""),user_agent:navigator.userAgent,page_url:location.href});
   Object.assign(d,{whatsapp:(d.indicatif||"")+" "+(d.numero||"").replace(/\D/g,"").replace(/^0/,""),segment:SEGMENT,utm_source:q.get("utm_source")||"",utm_campaign:q.get("utm_campaign")||"",utm_content:q.get("utm_content")||"",date:new Date().toISOString()});
+  // IP (IPv6 si dispo) et pays pour l'API Conversions ; 1,2 s max pour ne pas ralentir l'envoi
+  try{const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),1200);const r=await fetch("https://api64.ipify.org?format=json",{signal:ctl.signal});clearTimeout(t);d.ip=(await r.json()).ip||"";}catch(err){d.ip="";}
+  d.pays=((selInd.selectedOptions[0]||{}).dataset||{}).pays||"";
   if(REGLAGES.WEBHOOK_URL){try{await fetch(REGLAGES.WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})}catch(err){}}
   if(typeof fbq==="function")fbq("track","Lead",{content_category:SEGMENT},{eventID:d.event_id});
   // Calendly : nom et e-mail préremplis, a2 = site, a3 = WhatsApp, segment dans utm_campaign
